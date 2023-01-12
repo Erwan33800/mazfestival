@@ -39,14 +39,14 @@ export default function FormLogin() {
               <WrapItem alignItems={"center"}>
                 <Box w={300}>
                   <Text mb={5} fontSize="2xl" textAlign={"center"}>
-                    14-15-16 Juillet 2023
+                    14-15-16 Juillet 2023 !
                   </Text>
                   <Text textAlign={"center"} mt={2} color="gray.500">
                     Remplis les champs de gauche <br />
-                    afin d'accéder à la billeterie
+                    pour accéder à la billeterie
                   </Text>
                   <Text mt={8} mb={5} fontSize="1xl" textAlign={"center"}>
-                    plus d'infos à venir..
+                    plus de détails à venir..
                   </Text>
                   <HStack
                     spacing={5}

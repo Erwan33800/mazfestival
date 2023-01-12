@@ -38,7 +38,7 @@ export default function Login() {
                 <Box>
                   <Heading textAlign={"center"}>MAZ Festival</Heading>
                   <Text textAlign={"center"} mt={2} color="gray.500">
-                    Authentification admin, ici c'est pour les boss !
+                    Authentification admin, ici il y a que les boss !
                   </Text>
                   <HStack
                     spacing={5}
