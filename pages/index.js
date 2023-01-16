@@ -42,8 +42,8 @@ export default function FormLogin() {
                     14-15-16 Juillet 2023 !
                   </Text>
                   <Text textAlign={"center"} mt={2} color="gray.500">
-                    Remplis les champs de gauche <br />
-                    pour accéder à la billeterie
+                    Remplis les champs pour<br />
+                    accéder à la billeterie
                   </Text>
                   <Text mt={8} mb={5} fontSize="1xl" textAlign={"center"}>
                     plus de détails à venir..

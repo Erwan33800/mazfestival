@@ -12,16 +12,18 @@ function Admin() {
 
   useEffect(() => {
     // Récupérez les utilisateurs avec une requête HTTP, par exemple avec Axios
-    axios.get("http://localhost:3005/users").then((response) => {
+    axios.get("https://maz-api.onrender.com/users").then((response) => {
       setUsers(response.data);
     });
   }, []);
 
   useEffect(() => {
     // Récupérez les utilisateurs avec une requête HTTP, par exemple avec Axios
-    axios.get("http://localhost:3005/users/not-payed").then((response) => {
-      setUsersNotPayed(response.data);
-    });
+    axios
+      .get("https://maz-api.onrender.com/users/not-payed")
+      .then((response) => {
+        setUsersNotPayed(response.data);
+      });
   }, []);
 
   return (

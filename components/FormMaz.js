@@ -30,7 +30,7 @@ export default function FormMaz() {
     }
 
     axios
-      .post("http://localhost:3005/users", {
+      .post("https://maz-api.onrender.com/users", {
         fname: fname,
         lname: lname,
         email: email,
@@ -86,7 +86,7 @@ export default function FormMaz() {
             <FormLabel>Ton mail</FormLabel>
             <InputGroup borderColor="#E0E1E7">
               <InputLeftElement pointerEvents="none">
-              <MdOutlineEmail color="gray.800" />
+                <MdOutlineEmail color="gray.800" />
               </InputLeftElement>
               <Input
                 type="text"
