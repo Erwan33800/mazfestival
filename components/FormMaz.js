@@ -10,7 +10,7 @@ import {
   useColorModeValue,
   Heading,
   Text,
-  Link
+  Link,
 } from "@chakra-ui/react";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsPerson } from "react-icons/bs";
@@ -30,6 +30,7 @@ export default function FormMaz() {
       setError("Please fill in all fields");
       return;
     }
+    const urlLydia = "https://lydia-app.com/pots?id=73824-maz-2023";
 
     axios
       .post("https://maz-api.onrender.com/users", {
@@ -48,6 +49,9 @@ export default function FormMaz() {
       .catch((error) => {
         console.log(error);
         setError(error);
+        alert(
+          "Si t'as déjà renseigné tes infos, tu peux aller acheter ton billet avec ce lien : https://lydia-app.com/pots?id=73824-maz-2023"
+        );
       });
   };
   return (
@@ -97,18 +101,6 @@ export default function FormMaz() {
               />
             </InputGroup>
           </FormControl>
-          {error && (
-            <Box>
-              <Text color="red.500" mt={2}>
-                {error}
-              </Text>
-
-              <Text mt={2}>
-                Si tu as déjà acheté un billet, tu peux te rendre sur <Link href="https://lydia-app.com/pots?id=73824-maz-2023" color="blue.400">la billeterie</Link>
-              </Text>
-
-            </Box>
-          )}
           <Button
             colorScheme="blue"
             bg="blue.400"
