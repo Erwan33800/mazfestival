@@ -18,6 +18,7 @@ import { useState } from "react";
 import axios from "axios";
 
 function ModalMailBillet({ selectedRows }) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   function sendCheckedUsersToBackend(users) {
     console.log(users);
     // Envoyez les identifiants cochés au backend en utilisant une requête HTTP, par exemple avec Axios
@@ -25,9 +26,9 @@ function ModalMailBillet({ selectedRows }) {
       .post("https://maz-api.onrender.com/mails-billet", { users: users })
       .then((response) => {
         console.log(response.data);
+        onClose();
       });
   }
-  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Button colorScheme="green" onClick={onOpen}>Envoyer mail</Button>
