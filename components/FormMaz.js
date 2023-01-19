@@ -9,6 +9,8 @@ import {
   InputLeftElement,
   useColorModeValue,
   Heading,
+  Text,
+  Link
 } from "@chakra-ui/react";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsPerson } from "react-icons/bs";
@@ -95,6 +97,18 @@ export default function FormMaz() {
               />
             </InputGroup>
           </FormControl>
+          {error && (
+            <Box>
+              <Text color="red.500" mt={2}>
+                {error}
+              </Text>
+
+              <Text mt={2}>
+                Si tu as déjà acheté un billet, tu peux te rendre sur <Link href="https://lydia-app.com/pots?id=73824-maz-2023" color="blue.400">la billeterie</Link>
+              </Text>
+
+            </Box>
+          )}
           <Button
             colorScheme="blue"
             bg="blue.400"
