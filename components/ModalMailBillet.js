@@ -8,7 +8,7 @@ import {
   ModalCloseButton,
   ModalBody,
   Button,
-  Lorem,
+  Text,
   ModalFooter,
   useDisclosure,
   OrderedList,
@@ -19,6 +19,8 @@ import axios from "axios";
 
 function ModalMailBillet({ selectedRows }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [error, setError] = useState(null);
+
   function sendCheckedUsersToBackend(users) {
     console.log(users);
     // Envoyez les identifiants cochés au backend en utilisant une requête HTTP, par exemple avec Axios
@@ -27,11 +29,17 @@ function ModalMailBillet({ selectedRows }) {
       .then((response) => {
         console.log(response.data);
         onClose();
+      })
+      .catch((error) => {
+        console.log("L'envoi des mails a échoué");
+        setError(error);
       });
   }
   return (
     <>
-      <Button colorScheme="green" onClick={onOpen}>Envoyer mail</Button>
+      <Button colorScheme="green" onClick={onOpen}>
+        Envoyer mail
+      </Button>
 
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
@@ -46,6 +54,11 @@ function ModalMailBillet({ selectedRows }) {
                 </ListItem>
               ))}
             </OrderedList>
+            {error && (
+              <Text color="red.500" mt={2}>
+                {error}
+              </Text>
+            )}
           </ModalBody>
 
           <ModalFooter>
