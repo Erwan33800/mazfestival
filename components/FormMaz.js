@@ -48,7 +48,6 @@ export default function FormMaz() {
         setError(error);
       });
   };
-
   return (
     <Box bg={useColorModeValue("white", "gray.700")} borderRadius="lg">
       <Box m={8} color="#0B0E3F">
