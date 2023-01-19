@@ -22,7 +22,7 @@ function ModalMailBillet({ selectedRows }) {
     console.log(users);
     // Envoyez les identifiants cochés au backend en utilisant une requête HTTP, par exemple avec Axios
     axios
-      .post("http://localhost:3005/mails-billet", { users: users })
+      .post("https://maz-api.onrender.com/mails-billet", { users: users })
       .then((response) => {
         console.log(response.data);
       });
