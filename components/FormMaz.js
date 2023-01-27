@@ -16,6 +16,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { BsPerson } from "react-icons/bs";
 import axios from "axios";
 import { useState } from "react";
+import ModalFormBillet from "./ModalFormBillet";
 
 export default function FormMaz() {
   const [fname, setFname] = useState("");
@@ -104,6 +105,7 @@ export default function FormMaz() {
           <Button
             colorScheme="blue"
             bg="blue.400"
+            w={'100%'}
             color="white"
             _hover={{
               bg: "blue.500",
@@ -113,18 +115,7 @@ export default function FormMaz() {
           >
             Accéder à la billeterie
           </Button>
-          <Text textAlign={"center"} color={"gray.500"} w={80} mb={5}>
-            <Link
-              href="https://lydia-app.com/pots?id=73824-maz-2023"
-              color="blue.400"
-              _hover={{
-                color: "blue.500",
-              }}
-            >
-              Si tu as déjà rempli le formulaire, tu peux aller acheter ton
-              billet ici !
-            </Link>
-          </Text>
+          <ModalFormBillet />
         </VStack>
       </Box>
     </Box>
