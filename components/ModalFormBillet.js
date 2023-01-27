@@ -22,7 +22,7 @@ function ModalFormBillet({}) {
   return (
     <>
       <Button colorScheme="blue" onClick={onOpen}>
-        Si t'as déjà rempli le formulaire, clique ici
+        Si tu as déjà rempli le formulaire, clique ici
       </Button>
 
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
@@ -40,7 +40,7 @@ function ModalFormBillet({}) {
                 formulaire mais non pas pris leur billet, pas de panique !{" "}
                 <br />
                 <br />
-                Tu peux tranquillement te rendre sur le lien suivant : <br/>
+                Tu peux tranquillement te rendre sur le lien suivant : <br />
                 <Link
                   href="https://lydia-app.com/pots?id=73824-maz-2023"
                   color="blue.400"
