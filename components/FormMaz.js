@@ -57,7 +57,7 @@ export default function FormMaz() {
   return (
     <Box bg={useColorModeValue("white", "gray.700")} borderRadius="lg">
       <Box m={8} color="#0B0E3F">
-        <Heading textAlign={"center"}>MAZ Festival</Heading>
+        <Heading textAlign={"center"}>MAZ Festival</Heading>        
         <VStack spacing={5} mt={5}>
           <FormControl id="fname">
             <FormLabel>Ton prénom </FormLabel>
