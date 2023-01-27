@@ -113,6 +113,18 @@ export default function FormMaz() {
           >
             Accéder à la billeterie
           </Button>
+          <Text textAlign={"center"} color={"gray.500"} w={80} mb={5}>
+            <Link
+              href="https://lydia-app.com/pots?id=73824-maz-2023"
+              color="blue.400"
+              _hover={{
+                color: "blue.500",
+              }}
+            >
+              Si tu as déjà rempli le formulaire, tu peux aller acheter ton
+              billet ici !
+            </Link>
+          </Text>
         </VStack>
       </Box>
     </Box>
