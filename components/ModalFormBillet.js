@@ -37,7 +37,7 @@ function ModalFormBillet({}) {
                 pour avoir accès à la billetterie ! <br />
                 <br />
                 Mais si tu fais partie des plus rapides qui ont déjà rempli le
-                formulaire mais non pas pris leur billet, pas de panique !{" "}
+                formulaire mais pas pris leur billet, pas de panique !{" "}
                 <br />
                 <br />
                 Tu peux tranquillement te rendre sur le lien suivant : <br />
